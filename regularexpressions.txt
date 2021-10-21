@@ -1,0 +1,30 @@
+Sözün ilk hərfi böyük, sonra istənilən qədər kiçik hərf və sonra yalnız bir rəqəm" olsun;
+
+
+
+[A-Z][a-z]+[0-9]
+
+
+
+
+
+String-də ən azı bir böyük, bir kiçik hərf və bir rəqəm olsun";
+
+  ^[a-zA-Z0-9]*$             or \w
+
+
+
+
+  Lorem      Ipsum          has   been    the  industry's      standard               dummy.    " 
+
+cümləsindəki artıq boşluqları silərək bu hala salsın: "Lorem Ipsum has been the industry's standard dummy.";
+
+
+
+
+<?php
+ 
+$txt="  Lorem      Ipsum          has   been    the  industry's      standard               dummy.";
+$new_txt = preg_replace('/\s\s+/', ' ',$txt);
+ 
+echo $new_txt;
